@@ -32,7 +32,7 @@ class FrontendController extends Controller
         $customer = customer::all();
         $about = about::all();
         $card = card::all();
-        return view('frontend.home',[
+        return view ('frontend.home',[
             'blog' => $blog,
             'misi' => $misi,
             'gallery' => $gallery,
@@ -45,16 +45,16 @@ class FrontendController extends Controller
         ]);
     }
 
-    public function index_show()
-    {
-        $home = Home::all();
-        $about = about::all();
+    // public function index_footer()
+    // {
+    //     $home = Home::all();
+    //     $about = about::all();
 
-        return view('includes.footer',[
-            'about' => $about,
-            'home' => $home,
-        ]);
-    }
+    //     return view('layouts.frontend',[
+    //         'about' => $about,
+    //         'home' => $home,
+    //     ]);
+    // }
 
     // public function footer()
     // {

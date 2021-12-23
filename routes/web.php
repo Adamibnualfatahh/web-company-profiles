@@ -62,6 +62,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/misi/edit/{id}',
 Route::middleware(['auth:sanctum', 'verified'])->post('dashboard/misi/update', 'App\Http\Controllers\MisiController@update');
 // frontend
 Route::get('/','App\Http\Controllers\FrontendController@index');
+//Route::get('App\Http\Controllers\FrontendController@index_footer');
+Route::any('(:any)', 'App\Http\Controllers\FrontendController@index_footer');
 
 Route::get('gallery','App\Http\Controllers\GalleryController@index_fr');
 Route::get('/blog','App\Http\Controllers\BlogController@index_fr');

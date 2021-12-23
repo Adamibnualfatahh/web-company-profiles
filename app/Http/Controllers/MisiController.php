@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Home;
 use App\Models\misi;
+use App\Models\about;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,9 +21,10 @@ class MisiController extends Controller
         return view('dashboard.misi', ['misi' => $misi]);
     }
      public function index_fr()
-    {
+    {   $about = about::all();
+        $home = Home::all();
         $misi = DB::table('misis') -> get();
-        return view('frontend.misi', ['misi' => $misi]);
+        return view('frontend.misi', ['misi' => $misi,'about' => $about,'home' => $home]);
     }
 
     /**

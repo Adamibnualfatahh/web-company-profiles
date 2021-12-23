@@ -23,9 +23,11 @@ class HomeController extends Controller
     }
     public function index_home()
     {
+        
        $home = DB::table('homes') -> get();
         // mengirim data users ke view 
-        return view('frontend.home', ['home' => $home]);
+        return view('frontend.home', ['home' => $home,
+    ]);
     }
     public function index_home_blog()
     {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Home;
+use App\Models\about;
 use App\Models\customer;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StorecustomerRequest;
@@ -16,6 +18,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
+         
        $customer = DB::table('customers') -> get();
         return view('dashboard.customer', ['customer' => $customer]);
     }

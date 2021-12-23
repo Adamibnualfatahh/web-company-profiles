@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Home;
+use App\Models\about;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreBlogRequest;
@@ -24,8 +26,12 @@ class BlogController extends Controller
 
     public function index_fr()
     {
+         $home = Home::all();
+        $about = about::all();
         $blog = DB::table('blogs') -> get();
-        return view('frontend.blog', ['blog' => $blog]);
+        return view('frontend.blog', ['blog' => $blog,
+        'about' => $about,
+            'home' => $home,]);
     }
     /**
      * Show the form for creating a new resource.
@@ -36,6 +42,7 @@ class BlogController extends Controller
     {
         return view('dashboard.add-blog');
     }
+   
 
     /**
      * Store a newly created resource in storage.

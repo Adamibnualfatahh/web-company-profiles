@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Home;
+use App\Models\about;
 use App\Models\gallery;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoregalleryRequest;
@@ -15,10 +17,13 @@ class GalleryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index_fr()
-    {
+    {   $home = Home::all();
+        $about = about::all();
          $gallery = DB::table('galleries') -> get();
         // mengirim data blog ke view 
-        return view('frontend.gallery', ['gallery' => $gallery]);
+        return view('frontend.gallery', ['gallery' => $gallery,
+     'about' => $about,
+            'home' => $home]);
     }
     public function index()
     {

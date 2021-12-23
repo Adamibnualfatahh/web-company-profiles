@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactFormMail;
 use Exception;
+use App\Models\Home;
+use App\Models\about;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormMail;
 use PHPMailer\PHPMailer\PHPMailer;
+use Illuminate\Support\Facades\Mail;
 
 class Contact extends Controller
 {
      function index(){
-        return view('frontend.contact');
+          $home = Home::all();
+        $about = about::all();
+        return view('frontend.contact',[
+        'about' => $about,
+            'home' => $home,]);
     }
 
     function store(){

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Home;
 use App\Models\about;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreaboutRequest;
@@ -15,10 +16,13 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {    $home = Home::all();
+        $about = about::all();
         $about = DB::table('abouts') -> get();
         // mengirim data blog ke view 
-        return view('dashboard.about', ['about' => $about]);
+        return view('dashboard.about', ['about' => $about,
+        'about' => $about,
+            'home' => $home,]);
     }
 
     /**

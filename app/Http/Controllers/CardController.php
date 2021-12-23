@@ -15,7 +15,7 @@ class CardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
          $card = DB::table('cards') -> get();
         
     }
