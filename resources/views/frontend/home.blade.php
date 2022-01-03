@@ -208,7 +208,7 @@
             <div class="w-full lg:w-1/2 text-center">
               <div class="lg:mt-12 subscribe-content">
                 <h1 class="text-2xl font-bold sm:text-4xl subscribe-title">
-          
+   
                      {{ $home->title }}
          
                  
