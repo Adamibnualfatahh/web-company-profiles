@@ -3,30 +3,33 @@
 <hr>
 
 <h2>Komponen Wajib Dijalankan</h2>
-<table border="1">
-<thead>
-<th>Fungsi</th>
-<th colspan="4">Data</th>
-</thead>    
-<tr>
-    <td>Migration</td>
-    <td>Database</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-<td>Seeder</td>
-<td>User</td>
-<td>Home</td>
-<td>Profil</td>
-</tr>
-<tr>
-<td></td>
-<td>Blog</td>
-<td>Gallery</td>
-<td>Portfolio</td>
-</tr>
-</table>
+<p>Instalasi</p>
+
+> $ git clone https://github.com/Adamibnualfatahh/Website-Company-Profile.git
+>
+>$ cd Website-Company-Profile
+>
+>$ composer install
+>
+>$ npm install
+>
+>$ chance .env.example to .env
+>
+>$ chance setting to database
+>
+>$ generate key : php artisan key:generate
+>
+>$ call to active the storage : php artisan storage:link
+>
+>$ call action to Migrate Database & Seeder : php artisan migrate --seed
+>
+>$ start server : php artisan serve
+
+<h2>Cara Masuk Halaman Dashboard</h2>
+
+* Masukan Url: /login
+* email : Admin@gmail.com
+* password : Adminganteng
 
 <hr>
 <h2>Teknologi Yang Digunakan</h2>
