@@ -28,8 +28,8 @@
 <h2>Cara Masuk Halaman Dashboard</h2>
 
 * Masukan Url: /login
-* email : Admin@gmail.com
-* password : Adminganteng
+* email : Anda dapat melihat pada seeder users
+* password : Anda dapat melihat pada seeder users
 
 <hr>
 <h2>Teknologi Yang Digunakan</h2>
