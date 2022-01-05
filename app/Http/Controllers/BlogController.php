@@ -84,8 +84,8 @@ class BlogController extends Controller
     {
         //  return view('frontend.content-blog', [
         //     "blog" => $blog]);
-
-         return view('frontend.content-blog', ["blog" => $blog]);
+            $blogs = DB::table('blogs') -> get();
+         return view('frontend.content-blog', ["blog" => $blog,"blogs" => $blogs]);
     }
 
     /**
