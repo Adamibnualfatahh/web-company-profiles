@@ -14,10 +14,20 @@ class GallerySeeder extends Seeder
      */
     public function run()
     {
-         DB::table('galleries')->insert([
+$galleries = [
+        [
             'image' =>'20211220023544.jpg',
             'name' =>'Saya Sendiri',
             'title' => 'Foto ketika acara pembagian hasil nilai',
-        ]);
+        ],
+        [
+            'image' =>'20220105065511.jpg',
+            'name' =>'Animation Design',
+            'title' => 'Character Animation Design',
+        ],
+        ];
+
+        DB::table('galleries')->insert($galleries);
+
     }
 }

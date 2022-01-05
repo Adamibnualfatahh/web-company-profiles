@@ -26,7 +26,7 @@ class Contact extends Controller
             'email' => 'required',
             'message' => 'required'
         ]);
-       Mail::to('adamibndasd7@gmail.com')->send(new ContactFormMail($data));
+       Mail::to('f518d0d256253a@gmail.com')->send(new ContactFormMail($data));
        return redirect('contact')->with('status', 'Terima kasih, kami sudah menerima email anda.');
     }
     

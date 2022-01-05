@@ -111,9 +111,7 @@ class BlogController extends Controller
     public function update(UpdateBlogRequest $request, Blog $blog)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'author' => 'required',
-            'created_at' => 'required',
             'title' => 'required',
             'content' => 'required',
         ]);

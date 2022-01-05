@@ -102,10 +102,9 @@ class PortfolioController extends Controller
     public function update(UpdateportfolioRequest $request, portfolio $portfolio)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            
             'title' => 'required',
             'name' => 'required',
-            'created_at' => 'required',
         ]);
         $input = $request->all();
          if ($image = $request->file('image')) {
