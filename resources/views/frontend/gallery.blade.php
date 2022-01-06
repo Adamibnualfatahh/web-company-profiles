@@ -150,6 +150,6 @@
       <!-- container -->
       <div id="particles-2" class="particles"></div>
     </footer>
-
+  <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
     <!--====== TEAM PART ENDS ======-->
 @endsection

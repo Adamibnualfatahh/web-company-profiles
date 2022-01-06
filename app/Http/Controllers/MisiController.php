@@ -23,8 +23,9 @@ class MisiController extends Controller
      public function index_fr()
     {   $about = about::all();
         $home = Home::all();
+         $homes = Home::all();
         $misi = DB::table('misis') -> get();
-        return view('frontend.misi', ['misi' => $misi,'about' => $about,'home' => $home]);
+        return view('frontend.misi', ['misi' => $misi,'about' => $about,'home' => $home,'homes' => $homes]);
     }
 
     /**
@@ -82,7 +83,6 @@ class MisiController extends Controller
     public function update(Request $request ,Misi $misi)
     {
       $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'visi' => 'required',
             'misi' => 'required',
             'text' => 'required',

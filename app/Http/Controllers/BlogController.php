@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
+use Cviebrock\EloquentSluggable\Services\SlugService as ServicesSlugService;
 
 class BlogController extends Controller
 {
@@ -49,17 +50,19 @@ class BlogController extends Controller
      *
      * @param  \App\Http\Requests\StoreBlogRequest  $request
      * @return \Illuminate\Http\Response
-     */
+    
+     */ 
+
     public function store(StoreBlogRequest $request)
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'author' => 'required',
+            'slug' => 'required',
             'title' => 'required',
             'content' => 'required',
             
         ]);
-  
         $input = $request->all();
   
         if ($image = $request->file('image')) {
@@ -74,6 +77,8 @@ class BlogController extends Controller
         return redirect('/dashboard/blog');
     }
 
+    
+
     /**
      * Display the specified resource.
      *
@@ -85,7 +90,7 @@ class BlogController extends Controller
         //  return view('frontend.content-blog', [
         //     "blog" => $blog]);
             $blogs = DB::table('blogs') -> get();
-         return view('frontend.content-blog', ["blog" => $blog,"blogs" => $blogs]);
+         return view('frontend.content-blog', ["blog" => $blog,"blogs" => $blog]);
     }
 
     /**

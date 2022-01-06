@@ -91,7 +91,7 @@ class HomeController extends Controller
     public function update(UpdateHomeRequest $request, Home $home)
     {
        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
             'title' => 'required',
             'text' => 'required',
         ]);

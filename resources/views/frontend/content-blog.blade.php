@@ -152,7 +152,7 @@
         </div>
         <div id="disqus_thread" class="mt-20 mr-20 ml-20"></div>
     </section>
-
+  <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

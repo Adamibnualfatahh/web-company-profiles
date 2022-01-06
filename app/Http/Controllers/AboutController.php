@@ -102,7 +102,7 @@ class AboutController extends Controller
     public function update(UpdateaboutRequest $request, about $about)
     {
        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            
             'text' => 'required',
             'title' => 'required',
         ]);
