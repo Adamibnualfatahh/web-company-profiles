@@ -67,7 +67,7 @@ Route::any('(:any)', 'App\Http\Controllers\FrontendController@index_footer');
 
 Route::get('gallery','App\Http\Controllers\GalleryController@index_fr');
 Route::get('/blog','App\Http\Controllers\BlogController@index_fr');
-Route::get('blog/{blog:slug}', 'App\Http\Controllers\BlogController@show');
+Route::get('blog/{blog:title}', 'App\Http\Controllers\BlogController@show');
 Route::get('portfolio', 'App\Http\Controllers\PortfolioController@index_fr');
 Route::get('profile', 'App\Http\Controllers\MisiController@index_fr');
 //Route::get('/','App\Http\Controllers\HomeController@index_home_blog');

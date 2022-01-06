@@ -38,7 +38,7 @@
                 <p class="mb-6 text-2xl leading-snug text-gray-900">
                   {{ $blog->title }}
                 </p>
-                <a class="text-theme-color-2" href="/blog/{{ $blog->slug }}">
+                <a class="text-theme-color-2" href="/blog/{{ $blog->title }}">
                   Baca Selengkapnya
                   <i class="ml-2 lni lni-chevron-right"></i>
                 </a>

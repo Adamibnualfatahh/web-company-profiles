@@ -135,7 +135,7 @@
                 <p class="mb-2 text-2xl leading-snug text-gray-900">
                   {{ $blogs->title }}
                 </p>
-                <a class="text-theme-color-2" href="/blog/{{ $blogs->slug }}">
+                <a class="text-theme-color-2" href="/blog/{{ $blogs->title }}">
                   Baca Selengkapnya
                   <i class="ml-2 lni lni-chevron-right"></i>
                 </a>
