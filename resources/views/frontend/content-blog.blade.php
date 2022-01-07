@@ -146,8 +146,13 @@
           @empty
               <h2>Halaman Masih Kosong</h2>
           @endforelse
-          
-         
+            <h1 class="text-center sm:text-3xl
+              text-xl
+              font-medium
+              title-font
+              mb-0 mt-20
+              text-gray-900"> <a href="/blog">Lihat  {{ $count-3 }} Konten Lainnya</a> </h1>
+        
           
         </div>
         <div id="disqus_thread" class="mt-20 mr-20 ml-20"></div>

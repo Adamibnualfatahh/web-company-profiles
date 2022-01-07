@@ -26,6 +26,9 @@ class BlogController extends Controller
 
     public function index_fr()
     {
+
+        
+
          $home = Home::all();
         $about = about::all();
         $blog = DB::table('blogs') -> get();
@@ -84,8 +87,10 @@ class BlogController extends Controller
     {
         //  return view('frontend.content-blog', [
         //     "blog" => $blog]);
+        
+            $count = DB::table('blogs')->count();
          $blogs = DB::table('blogs') -> get();
-         return view('frontend.content-blog', ["blog" => $blog,"blogs" => $blogs]);
+         return view('frontend.content-blog', ["blog" => $blog,"blogs" => $blogs,"count"=>$count]);
     }
 
     /**

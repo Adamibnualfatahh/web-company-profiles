@@ -39,8 +39,8 @@
                                   
                                  @foreach ($gallery as $gallery)
                                     <tr class="whitespace-nowrap">
-                                        <td class="px-6 py-4  text-gray-500">
-                                           <img class="rounded-btn w-50 h-30" src="/image/{{ $gallery->image }}" alt="">
+                                        <td class="px-6 py-4  text-gray-50	">
+                                           <img class="rounded max-w-sm	 max-h-24" src="/image/{{ $gallery->image }}" alt="">
                                         </td>
                                          <td class="px-6 py-4">
                                             <div class=" text-gray-900">

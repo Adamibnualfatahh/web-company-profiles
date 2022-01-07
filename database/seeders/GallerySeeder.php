@@ -28,6 +28,6 @@ $galleries = [
         ];
 
         DB::table('galleries')->insert($galleries);
-
+	
     }
 }
