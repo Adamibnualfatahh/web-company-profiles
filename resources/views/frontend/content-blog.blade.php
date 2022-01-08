@@ -66,8 +66,7 @@
               text-2xl
               font-medium
               title-font
-              mb-4
-              text-gray-900
+              text-gray-900 
             "
           >
             {{ $blog->title }}
@@ -78,10 +77,10 @@
     </section>
 
     <section class="text-gray-600 body-font overflow-hidden">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-20 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
           <img
-            alt="ecommerce"
+            alt="Blog Content"
             class="
               lg:lg\:w-1\/3
               w-full
@@ -95,7 +94,7 @@
             src="/image/{{ $blog->image }}"
           />
           <br>
-          <p class="">
+          <p class="break-words">
             {!! $blog->content !!} 
             </p>
         </div>
@@ -103,7 +102,7 @@
       
       <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
       <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{ $blog->author }}</h2>
-      <p class="text-gray-500">{{ $blog->created_at }}</p>
+      <p class="text-gray-500">{{ date('d-m-Y', strtotime($blog->created_at)) }}</p>
       
      
             <h1 class="text-center sm:text-3xl
@@ -152,8 +151,6 @@
               title-font
               mb-0 mt-20
               text-gray-900"> <a href="/blog">Lihat  {{ $count-3 }} Konten Lainnya</a> </h1>
-        
-          
         </div>
         <div id="disqus_thread" class="mt-20 mr-20 ml-20"></div>
     </section>

@@ -27,11 +27,16 @@ class BlogController extends Controller
     public function index_fr()
     {
 
-        
+         $posts = Blog::latest();
+
+        if(request('search')){
+            $posts->where('title', 'like', '%' . request('search'). '%');
+        }
+
 
          $home = Home::all();
         $about = about::all();
-        $blog = DB::table('blogs') -> get();
+        $blog = $posts->get();
         return view('frontend.blog', ['blog' => $blog,
         'about' => $about,
             'home' => $home,]);
