@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CardSeeder::class,
             AboutSeeder::class,
             CustomerSeeder::class,
+            VideoSeeder::class,
         ]);
     }
 }

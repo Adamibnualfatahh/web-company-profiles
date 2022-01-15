@@ -87,7 +87,6 @@
                 <h2 class="mt-20 text-2xl	font-extrabold	">Oh Tidak Halaman Masih Kosong ...</h2>
             @endforelse
             
-          
             
           </div>
           <!-- row -->

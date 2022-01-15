@@ -108,13 +108,13 @@
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-            <div class="justify-center row">
+            <div class="justify-center row ">
                 
               @foreach ($card as $card)
                   
               
 
-                <div class="w-full sm:w-2/3 lg:w-1/3">
+                <div class="w-full sm:w-2/3 lg:w-1/3 ">
                     <div class="mt-8 text-center single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
                             <img class="shape" src="/image/{{ $card->image }}" alt="shape">

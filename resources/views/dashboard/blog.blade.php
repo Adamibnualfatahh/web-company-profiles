@@ -80,7 +80,6 @@
                                    @empty
                                        <td class="text-gray-500">Halaman Masih Kosong</td>
                                    @endforelse
-                                   
                                 </tbody>
                             </table>
                         </div>

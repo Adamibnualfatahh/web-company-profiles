@@ -29,7 +29,7 @@
             <div class="pb-8 text-center section-title">
               <div class="m-auto line"></div>
               <h3 class="title"><span>Gallery</span>Pages</h3>
-              <span class="mt-4"><a href="/gallery" class="text-blue-700 font-bold">Photos</a> | <a href="/gallery/videos" class="text-blue-500">Videos</a> </span>
+              <span class="mt-4"><a href="/gallery" class="text-blue-500 btn">Photos</a> | <a href="/gallery/videos" class="text-blue-700 font-bold ">Videos</a> </span>
             </div>
 
             
@@ -46,7 +46,10 @@
               data-wow-delay="0.5s"
             >
               <div class="relative team-image">
-                <img class="w-full max-h-60	" src="/image/{{ $gallery->image }}" alt="Team" />
+                  <video class="w-full max-h-60	" controls  >
+                     <source src="/video/{{ $gallery->video }}" type="video/mp4"> 
+                    <source src="/video/{{ $gallery->video }}" type="video/ogg"> 
+                  </video>
               </div>
               <div class="p-8">
                 <h5 class="mb-1 text-xl font-bold text-gray-900">{{ $gallery->name }}</h5>

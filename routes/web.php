@@ -11,6 +11,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\VideoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/gallery/destroy/
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/gallery/edit/{id}', 'App\Http\Controllers\GalleryController@edit');
 Route::middleware(['auth:sanctum', 'verified'])->resource('/dashboard/gallery', GalleryController::class);
 Route::middleware(['auth:sanctum', 'verified'])->post('dashboard/gallery/update', 'App\Http\Controllers\GalleryController@update');
+//gallery videos
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/videos/destroy/{id}', 'App\Http\Controllers\VideoController@destroy');
+Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/videos/edit/{id}', 'App\Http\Controllers\VideoController@edit');
+Route::middleware(['auth:sanctum', 'verified'])->resource('/dashboard/videos', VideoController::class);
+Route::middleware(['auth:sanctum', 'verified'])->post('dashboard/videos/update', 'App\Http\Controllers\VideoController@update');
 //blog
 Route::middleware(['auth:sanctum', 'verified'])->get('dashboard/blog/destroy/{id}', 'App\Http\Controllers\BlogController@destroy');
 Route::middleware(['auth:sanctum', 'verified'])->resource('/dashboard/blog', BlogController::class);
@@ -66,6 +72,7 @@ Route::get('/','App\Http\Controllers\FrontendController@index');
 Route::any('(:any)', 'App\Http\Controllers\FrontendController@index_footer');
 
 Route::get('gallery','App\Http\Controllers\GalleryController@index_fr');
+Route::get('gallery/videos','App\Http\Controllers\VideoController@index_fr');
 Route::get('/blog','App\Http\Controllers\BlogController@index_fr');
 Route::get('blog/{blog:title}', 'App\Http\Controllers\BlogController@show');
 
